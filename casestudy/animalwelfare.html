@@ -1,0 +1,77 @@
+<html>
+<body bgcolor="powderblue">
+	<head>
+	
+	<script>
+	function searchDetails(){
+				var name = document.getElementById("search").value;
+				var length = parseInt(stored.length);
+				if(length==0){
+					alert("No data was found");
+				}else{
+					document.getElementById("table2").innerHTML=document.getElementById("table3").innerHTML;
+					for(var i=0;i<length;i=i+7){
+						if(stored[i]==name){
+							<!-- var name = stored[i]; -->
+							<!-- var petType = stored[i+1]; -->
+							<!-- var petName = stored[i+2]; -->
+							<!-- var petAge = stored[i+3]; -->
+							<!-- var treatment = stored[i+4]; -->
+							<!-- var vaccination = stored[i+5]; -->
+							<!-- var vaccinationDate = stored[i+6]; -->
+							row = document.createElement('tr');
+							row.id="tr1";
+							for(var j=0;j<7;j++){
+								heading = document.createElement('th');
+								heading.innerHTML=stored[i+j];
+								heading.id="th1"
+								row.append(heading);
+								
+							}
+							
+							var thead = document.createElement('tbody');
+							thead.append(row);
+							document.getElementById("table2").appendChild(thead);
+						}
+					}
+				}
+			}
+			function clearDetails(){
+				document.getElementById("table2").innerHTML=document.getElementById("table3").innerHTML;
+			}
+			function clickedPetOwner(){
+				document.getElementById("center_").style.display="none";
+				document.getElementById("left").style.display="inline";
+			}
+			function clickedWelfareMember(){
+				document.getElementById("center_").style.display="none";
+				document.getElementById("right").style.display="inline";
+			}
+		</script>
+		</head>
+		<form>
+		        <div align="center">
+				<h1>Search Owner Details</h1>
+				<input type="text"  id ="search" value ="" required style="width:30%">
+				<button type="button" onclick="searchDetails()" id="search_btn" >Search</button>
+				
+			
+				<table id="table2">
+					<tr id="tr1">
+						<th id="th1">
+							Owner Details
+						</th>
+						</tr>
+					<tr id="th1">
+						  <th id="th1">
+							Pet Details
+						</th >
+					</tr>
+				</table>
+				<button type="button" onclick="clearDetails()" id="clear_btn" >Clear</button>
+				<p><a href="file:///C:/Users/Administrator/Desktop/html/casestudy.html" onclick="history.go(-1)">Go Back</a></p>
+			     </div>
+			
+			</form>
+	</body>
+</html>
