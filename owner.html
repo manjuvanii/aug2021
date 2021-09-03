@@ -1,0 +1,144 @@
+<html>
+<body bgcolor="powderblue">
+<script>
+			var stored=[];
+			// Use this in inside this  if you dont want to give inputs many times:
+			//var stored=["sai","dog","name","12","blah","vacc","someday","sai","dog","name","12","blah","vacc","someday","sai","dog","name","12","blah","vacc","someday","sai","dog","name","12","blah","vacc","someday"];
+			function storeThis(){
+				var name = document.getElementById("owner_name").value;
+				var phoneno = document.getElementById("phone").value;
+				var petType = document.getElementById("pet_type").value;
+				var petName = document.getElementById("pet_name").value;
+				var petAge = document.getElementById("pet_age").value;
+				var treatment = document.getElementById("treatment").value;
+				var vaccination = document.getElementById("vaccination").value;
+				var vaccinationDate = document.getElementById("vac_date").value;
+				
+				
+					stored.push(name);
+					stored.push(phoneno);
+					stored.push(petType);
+					stored.push(petName);
+					stored.push(petAge);
+					stored.push(treatment);
+					stored.push(vaccination);
+					stored.push(vaccinationDate);
+					
+					alert(name+ " your pet details are stored.");
+					document.getElementById("owner_name").value=null;
+					document.getElementById("pet_type").value=null;
+					document.getElementById("pet_name").value=null;
+					document.getElementById("pet_age").value=null;
+					document.getElementById("treatment").value=null;
+					document.getElementById("vaccination").value=null;
+					document.getElementById("vac_date").value=null;
+			}
+			</script>
+			
+<h1 style="text-align:center;">Update your details here!</h1>
+<div align="center">
+<form>
+				<table id="table">
+				<tr>
+						<th>
+							 
+				             <p style="font-size:20px;margin-center:25px">Owner Details</p>
+							 
+						</th>
+				</tr>		
+					<tr>
+						<th>
+							Name of owner:
+						</th>
+						<th>
+							<input type="text"  id ="owner_name" value ="" required>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							Contact no:
+						</th>
+						<th>
+							<input type="number"  id ="phoneno" value ="" required>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<p style="font-size:20px;margin-top:25px">Pet Details</p>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							Pet Type: 
+						</th>
+						<th>
+							<input type="text"  id ="pet_type" value ="" >
+						</th>
+					</tr>
+					<tr>
+						<th>
+							Pet Name:
+						</th>
+						<th>
+							<input type="text"  id ="pet_name" value ="" >
+						</th>
+					</tr>
+					<tr>
+						<th>
+							Pet Age:
+						</th>
+						<th>
+							<input type="number" style="width:50px" id ="pet_age" value ="" required>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<p style="font-size:20px;margin-top:25px">Procedures</p>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							Name of Procedures:
+						</th>
+						<th>
+							<input type="text"  id ="treatment" value ="" required>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							<p style="font-size:20px; margin-top:25px">Vaccination</p>
+						</th>
+						<th>
+							
+						</th>
+					</tr>
+					<tr>
+						<th>
+							Name of Vaccination:
+						</th>
+						<th>
+							<input type="text"  id ="vaccination" value ="" required>
+						</th>
+					</tr>
+					<tr>
+						<th>
+							Date of vaccination:
+						</th>
+						<th>
+							<input type="date"  id ="vac_date" value ="" required>
+						</th>
+					</tr>
+				</table>
+				<button type="button" onclick="storeThis()" id="submit"  >submit</button>
+				<a href="file:///C:/Users/Administrator/Desktop/html/casestudy.html" onclick="history.go(-1)">Go Back</a>
+			</form>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
