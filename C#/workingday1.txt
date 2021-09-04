@@ -1,0 +1,62 @@
+using System;
+
+namespace workingday
+{
+   
+    class Program
+    {
+        enum week
+        {
+            monday=1, tuesday, wednesday, thursday, friday, saturday,sunday
+        };
+        static void Main(string[] args)
+        {
+            week mon = week.monday;
+            week tue = week.tuesday;
+            week wed = week.wednesday;
+            week thu = week.thursday;
+            week fri = week.friday;
+            week sat = week.saturday;
+            week sun = week.sunday;
+
+
+            Console.WriteLine("Enter a Day you want to know");
+            String n = Console.ReadLine();
+            int num = int.Parse(n);
+            if (num > 0 && num <= 7)
+            {
+                switch (num)
+                {
+                    case 1:
+                        Console.WriteLine(mon + " is a working day");
+                        break;
+                    case 2:
+                        Console.WriteLine(tue + " is a working day");
+                        break;
+                    case 3:
+                        Console.WriteLine(wed + " is a working day");
+                        break;
+                    case 4:
+                        Console.WriteLine(thu + " is a working day");
+                        break;
+                    case 5:
+                        Console.WriteLine(fri + " is a working day");
+                        break;
+                    case 6:
+                        Console.WriteLine(sat + "is a holiday");
+                        break;
+                    case 7:
+                        Console.WriteLine(sun + " is a holiday");
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Invalid number!");
+
+            }
+
+        }
+        
+    }
+}
