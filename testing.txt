@@ -1,0 +1,46 @@
+TC No.    Preconditions                         Scenario Name       Description                   Action                                    Test data                         Expected result			Actual Result      Status
+
+TC_001    Attendance screen should be visible   Attendance screen   Application should be      1)Select issues from dropdown list        Issues Selected		     Submit successfull
+                                                                    able to take data and      2)Select Date in dd/mm/yy’ format	   Valid Date			     Request sent to reporting manager
+								    other information from     3)Enter reasons			      Data in Reasons field entered          Report of attendence displayed
+								    users and submit it to     4)Select sanctioning authority	      sanctioning authority selected	     All the fields are cleared
+                                                                    reporting manager          5)click on submit button
+										               6)click on ViewReport
+										               7)click on clear button
+
+
+TC_002     Attendance screen should be visible   Attendance screen   Application should be      1)Select issues from dropdown list            Issues Selected		      Submit unsuccessful  
+                                                                     able to take data and      2)Select Date in dd/mm/yy’ format	       Invalid Date		      Error message
+								     other information from	3)Enter reasons			       Data in Reasons field entered
+                                                                     users and submit it to     4)Select sanctioning authority		sanctioning authority selected
+                                                                     reporting manager          5)click on submit button
+											        6)click on ViewReport
+										 	        7)click on clear button
+
+
+TC_003     Attendance screen should be visible   Attendance screen   Application should be      1)Select issues from dropdown list            Issues Not Selected	      Submit unsuccessful  
+                                                                     able to take data and      2)Select Date in dd/mm/yy’ format	       valid Date		      Error message
+								     other information from	3)Enter reasons			       Data in Reasons field entered
+                                                                     users and submit it to     4)Select sanctioning authority		sanctioning authority selected
+                                                                     reporting manager          5)click on submit button
+											        6)click on ViewReport
+										 	        7)click on clear button
+
+
+TC_004    Attendance screen should be visible   Attendance screen   Application should be      1)Select issues from dropdown list        Issues Selected		     Submit unsuccessfull
+                                                                    able to take data and      2)Select Date in dd/mm/yy’ format	   Valid Date			     Error message
+								    other information from     3)Enter reasons			      Data in Reasons field not entered      
+								    users and submit it to     4)Select sanctioning authority		sanctioning authority selected				     
+                                                                    reporting manager          5)click on submit button
+										               6)click on ViewReport
+										               7)click on clear button
+
+
+
+TC_005    Attendance screen should be visible   Attendance screen   Application should be      1)Select issues from dropdown list        Issues Selected		     Submit unsuccessfull
+                                                                    able to take data and      2)Select Date in dd/mm/yy’ format	   Valid Date			     Error message
+								    other information from     3)Enter reasons			      Data in Reasons field entered      
+								    users and submit it to     4)Select sanctioning authority	      sanctioning authority not selected				     
+                                                                    reporting manager          5)click on submit button
+										               6)click on ViewReport
+										               7)click on clear button
