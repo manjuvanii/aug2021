@@ -1,0 +1,56 @@
+1. Create folder 'Test' in your home directory​
+ mkdir Test
+
+2. Create below files​
+ 
+  - employeelist​
+   touch employeelist​
+
+  - skillset​
+     touch skillset
+​
+
+3. Create folder Test2 in home directory​
+   mkdit Test2
+
+  - create symbolink and hard link for skillset file ​
+    ln skillset  hardlink
+    ln -s skillset symbolink
+
+  - delete skillset file and check if hardlink and symbolic link file exists​
+    rm skillset
+    ls -l -i
+    cat hardkink
+    cat symbolink
+    (There will be no error while executing command  cat hardkink
+    and error during cat symbolink)
+
+  - explain the difference b/n symbolic and hard links​
+    A hard link, then, just creates another file with a link to the same underlying inode.
+    A symbolic link is a special file containing a path to another file. It is like a shortcut of the orignal file. 
+
+4. Provide read and write permission to 'user2' group​
+test if user2 group users can access the file​
+   chmod g+rw employeelist
+​
+
+5. Revoke write permission from user2 group and test the access again​
+   chmod g-r employeelist
+
+
+6. Grant write permission for others and test it ​
+   chmod o+w employeelist
+
+
+7. Revoke write permission for others and test again​
+   chmod o-w employeelist
+
+8. Change the group of employeelist file to 'user3'​
+test if user3 group have access​
+    chrgp user3 employeelist
+
+9. Change ownership of the file to user5 and test​
+    chown user5 employeelist
+
+10. check how many employees are there  (hint: use wc command)​
+    who | wc -l
